@@ -1,0 +1,21 @@
+# This file is supported by the REST Client extension
+# for VS Code by Huachao Mao (humao.rest-client)
+
+@function-host = localhost:7071
+@input = this is text to tokenize
+@model = davinci
+
+### Test using a GET
+GET http://{{function-host}}/api/tokenize?input={{input}}&model={{model}}
+
+### Test using a POST
+POST http://{{function-host}}/api/tokenize
+Content-Type: application/json
+
+{
+  "input": "{{input}}",
+  "model": "{{model}}"
+}
+
+### Get a list of all supported encodings and model mappings from tiktoken
+GET http://{{function-host}}/api/encodings
