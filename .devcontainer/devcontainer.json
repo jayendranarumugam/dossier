@@ -7,6 +7,22 @@
     "ghcr.io/jlaundry/devcontainer-features/azure-functions-core-tools:1": {}
   },
   "forwardPorts": [
-      7071,
-  ]
+      7071
+  ],
+  "customizations": {
+  "vscode": {
+    "extensions": [
+      // Recommended extensions - GitHub
+      "cschleiden.vscode-github-actions",
+      "GitHub.vscode-pull-request-github",
+
+      "Azurite.azurite",
+
+      // Recommended extensions - .NET
+      "Fudge.auto-using",
+      "jongrant.csharpsortusings",
+      "kreativ-software.csharpextensions"
+    ]
+  }
+}
 }
